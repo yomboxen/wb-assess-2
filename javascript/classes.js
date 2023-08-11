@@ -53,9 +53,9 @@ class Library {
     this.books = [];
   }
 
-  createAndAddBook(title, author) {
-    
-  }
+  // createAndAddBook(title, author) {
+  //   const newBook = new Book(title, author)
+  // }
 
   findBooksByAuthor(author) {
     // Replace this with your code
@@ -90,7 +90,16 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
-  // Replace this with your code
+  constructor(length, width) {
+    super(length)
+    this.length = this.width
+  }
+
+  getArea() {
+    if(this.length === this.width) {
+      return this.length * 2
+    } else return undefined
+  }
 }
 
 export { Bicycle, Book, Library, Rectangle, Square, User };

@@ -12,3 +12,26 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+#nav {
+    background-color: rgb(37, 37, 37);
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dev {
+    color: rgb(42, 171, 226);
+}
+
+.nav-btn {
+    color: white;
+    margin-left: 80px;
+}
+
+.nav-right {
+    display: flex;
+    margin-right: 20px;
+}

@@ -41,12 +41,12 @@ const foods = [
 // Use the .forEach method to modify each food object in the foods array above to include calories.
 // Calories can be calculated by multiplying carbs by 4, protein by 4, fat by 9,
 // and then adding the results together.
-function addCalories() {
-  foods.forEach((food) => {
-    
-  })
-  return foods;
-}
+// function addCalories() {
+//   foods.forEach((food) => {
+
+//   })
+//   return foods;
+// }
 
 // For problems 2-4, you will be working with the products array below.
 // Think of this array as a store's inventory.
@@ -81,17 +81,19 @@ const products = [
 // You've decided to have a sale on everything you have in stock. It's all going to be 25% off.
 // Using the map method, make a copy of your products array with the prices reduced by 25%
 // and return it.
-function getSaleProducts() {
-  // Replace this with your code
-}
+// function getSaleProducts() {
+//   let salePrices = products.map(product => product.price - (product.price * 0.25))
+// } return salePrices
 
 // A customer has placed an order - they want one of every product that has blue on it.
 // Using the filter method return the products that have blue in their color array
 // to a new variable called 'blueProducts'.
 // (Hint: look up the array method 'includes' on MDN)
-function getBlueProducts() {
-  // Replace this with your code
-}
+// function getBlueProducts() {
+//   const blueProducts = products.filter((product) => {
+//     return product.includes('blue')
+//   })
+// }
 
 // Get the total price of all the products using the reduce method.
 function getTotalPrice() {

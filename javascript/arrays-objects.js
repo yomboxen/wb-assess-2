@@ -67,11 +67,11 @@ function evenShapes() {
     octagon: 8,
   };
 
-  // for(const shape in shapes){
-  //   if(shape % 2 !== 0) {
-  //     delete shapes.shape
-  //   }
-  // }
+  for(const shape in shapes){
+    if(shapes[shape] % 2 !== 0) {
+      delete shapes[shape]
+    }
+  }
 
   return shapes;
 }

@@ -6,7 +6,11 @@
 //   bicycles might come from different manufacturers
 // - Bicycles come in different colors (ex.: red, silver, blue…)
 class Bicycle {
-  // Replace this with your code
+  constructor(numWheels, colors, manufacturer) {
+  this.numWheels = numWheels
+  this.colors = colors
+  this.manufacturer = manufacturer
+  }
 }
 
 // This User class is intended to be used in a web application where users can
@@ -50,7 +54,7 @@ class Library {
   }
 
   createAndAddBook(title, author) {
-    // Replace this with your code
+    
   }
 
   findBooksByAuthor(author) {

@@ -24,6 +24,9 @@ the font is called 'nunito' and can be found on google fonts
 
 .dev {
     color: rgb(42, 171, 226);
+    margin-left: 20px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .nav-btn {
@@ -34,4 +37,10 @@ the font is called 'nunito' and can be found on google fonts
 .nav-right {
     display: flex;
     margin-right: 20px;
+}
+
+.footer {
+    background-color: rgb(42, 171, 226);
+    height: 10vh;
+    width: 100vw;
 }

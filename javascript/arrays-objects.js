@@ -108,13 +108,13 @@ function betterCourses() {
     },
   ];
 
-  // courses.forEach((course) => {
-  //   for(const course in courses) {
-  //   if(course === true) {
-  //     course = false
-  //   }
-  // }
-  // })
+//  for(const course of courses) {
+//   for(const prop in course) {
+//     if(courses[course][prop] === true) {
+//       courses[course][prop] = false
+//     }
+//   }
+//  }
 
   return courses;
 }
@@ -127,7 +127,21 @@ function findPairs() {
   const lettersToPair = ['e', 'k', 's', 'a', 'e', 's', 'a', 'n', 'k', 'n'];
   const pairsArray = [];
 
-  // Replace this with your code
+for(let i = 0; i < lettersToPair.length; i++) {
+  for(let j = i + 1; j < lettersToPair.length; j++) {
+    if(lettersToPair[i] === lettersToPair[j]) {
+      pairsArray.push([i, j])
+    }
+  }
+}
+
+lettersToPair.forEach((letter, ind) => {
+  lettersToPair.forEach((secLetter, secInd) => {
+    if(letter === secLetter && ind < secInd) {
+      pairsArray.push([ind, secInd])
+    }
+  })
+})
 
   return pairsArray;
 }
@@ -151,20 +165,20 @@ const shippingInfo = {
 // Using the Object.assign method, create a new object that combines the contactInfo and
 // shippingInfo objects and return it.
 function getHelensInfo() {
-  const helensInfo = Object.assign(contactInfo, shippingInfo)
-  return helensInfo
+  return Object.assign({}, contactInfo, shippingInfo)
 }
 
 // Return Helen's email using destructuring.
-// function getHelensEmail() {
-//   const {name, phoneNumber, email, street, city, state, zipCode} = helensInfo
-//   return helensInfo.email
-// }
+function getHelensEmail() {
+  const {email} = contactInfo 
+  return email
+}
 
 // Use destructuring to save the zip code and state
 // from shippingInfo to new variables and return [zipCode, state]
 function getZipAndState() {
-  // Replace this with your code
+  const {zipCode, state} = shippingInfo
+  return [zipCode, state]
 }
 
 // Helen has a daughter named Ellen that lives at the same address.
@@ -172,11 +186,9 @@ function getZipAndState() {
 // contactInfo and shippingInfo objects. Then, overwrite the name property to 'Ellen'
 // and the email address to 'ellen@email.com'.
 // Return the new object.
-// function getEllensInfo() {
-//   const ellensInfo = {...helensInfo}
-//   ellensInfo.name = 'Ellen'
-//   ellensInfo.email = 'ellen@email.com'
-// }
+function getEllensInfo() {
+  return {...shippingInfo, ...contactInfo, name: "Ellen", email: 'ellen@email.com'}
+}
 
 // Use the userInfo object below to complete problems 9-11.
 const userInfo = {
@@ -243,21 +255,21 @@ function firstResponseId() {
   return userInfo.comments[1].responses[0].userId
 }
 
-export {
-  animalsWithElephant,
-  betterCourses,
-  contactInfo,
-  evenShapes,
-  findPairs,
-  firstResponseId,
-  flatAnimals,
-  getEllensInfo,
-  getHelensEmail,
-  getHelensInfo,
-  getZ,
-  getZipAndState,
-  improveGameRating,
-  lastTopic,
-  myArr,
-  shouldAlert,
-};
+// export {
+//   animalsWithElephant,
+//   betterCourses,
+//   contactInfo,
+//   evenShapes,
+//   findPairs,
+//   firstResponseId,
+//   flatAnimals,
+//   getEllensInfo,
+//   getHelensEmail,
+//   getHelensInfo,
+//   getZ,
+//   getZipAndState,
+//   improveGameRating,
+//   lastTopic,
+//   myArr,
+//   shouldAlert,
+// };

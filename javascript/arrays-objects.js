@@ -108,14 +108,14 @@ function betterCourses() {
     },
   ];
 
-//  for(const course of courses) {
-//   for(const prop in course) {
-//     if(courses[course][prop] === true) {
-//       courses[course][prop] = false
-//     }
-//   }
-//  }
-
+ for(const course of courses) {
+  for(const prop in course) {
+    // why do these need to be in bracket notation?
+    if(course[prop] === true) {
+      course[prop] = false
+    }
+  }
+ }
   return courses;
 }
 
@@ -135,13 +135,13 @@ for(let i = 0; i < lettersToPair.length; i++) {
   }
 }
 
-lettersToPair.forEach((letter, ind) => {
-  lettersToPair.forEach((secLetter, secInd) => {
-    if(letter === secLetter && ind < secInd) {
-      pairsArray.push([ind, secInd])
-    }
-  })
-})
+// lettersToPair.forEach((letter, ind) => {
+//   lettersToPair.forEach((secLetter, secInd) => {
+//     if(letter === secLetter && ind < secInd) {
+//       pairsArray.push([ind, secInd])
+//     }
+//   })
+// })
 
   return pairsArray;
 }
@@ -255,21 +255,21 @@ function firstResponseId() {
   return userInfo.comments[1].responses[0].userId
 }
 
-// export {
-//   animalsWithElephant,
-//   betterCourses,
-//   contactInfo,
-//   evenShapes,
-//   findPairs,
-//   firstResponseId,
-//   flatAnimals,
-//   getEllensInfo,
-//   getHelensEmail,
-//   getHelensInfo,
-//   getZ,
-//   getZipAndState,
-//   improveGameRating,
-//   lastTopic,
-//   myArr,
-//   shouldAlert,
-// };
+export {
+  animalsWithElephant,
+  betterCourses,
+  contactInfo,
+  evenShapes,
+  findPairs,
+  firstResponseId,
+  flatAnimals,
+  getEllensInfo,
+  getHelensEmail,
+  getHelensInfo,
+  getZ,
+  getZipAndState,
+  improveGameRating,
+  lastTopic,
+  myArr,
+  shouldAlert,
+};

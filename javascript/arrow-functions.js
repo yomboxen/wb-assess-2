@@ -92,11 +92,13 @@ function getSaleProducts() {
 // Using the filter method return the products that have blue in their color array
 // to a new variable called 'blueProducts'.
 // (Hint: look up the array method 'includes' on MDN)
-// function getBlueProducts() {
-//   const blueProducts = products.filter((product) => {
-//     return product.includes('blue')
-//   })
-// }
+function getBlueProducts() {
+  return products.filter((product) => {
+    return product.color.includes('blue')
+  })
+}
+
+console.log(getBlueProducts())
 
 // Get the total price of all the products using the reduce method.
 function getTotalPrice() {

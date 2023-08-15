@@ -38,7 +38,7 @@ class User {
   }
 }
 
-// This Book class is complete -- you don't need to change anything here. Instad,
+// This Book class is complete -- you don't need to change anything here. Instead,
 // you'll use it to implement two methods on the Library class below:
 //
 // - createAndAddBook: This method should create a new Book instance with the
@@ -58,12 +58,13 @@ class Library {
     this.books = [];
   }
 
-  // createAndAddBook(title, author) {
-  //   const newBook = new Book(title, author)
-  // }
+  createAndAddBook(title, author) {
+    const newBook = new Book(title, author)
+    this.books.push(newBook)
+  }
 
   findBooksByAuthor(author) {
-    // Replace this with your code
+    return this.books.filter(a => a.author === author)
   }
 }
 
@@ -95,15 +96,16 @@ class Rectangle {
 }
 
 class Square extends Rectangle {
-  constructor(length, width) {
-    super(length)
-    this.length = this.width
+  constructor(length) {
+    super(length, length)
   }
 
   getArea() {
     if(this.length === this.width) {
-      return this.length * 2
-    } else return undefined
+      return this.length * this.length
+    } else {
+      return undefined
+    }
   }
 }
 

@@ -1,7 +1,9 @@
+const form = document.querySelector('form');
 const closeForm = document.querySelector('#close-form');
-closeForm.addEventListener('click', hide)
+closeForm.addEventListener('click', () => {
+    form.classList.toggle('hide')
+})
 
 
 
-const form = document.querySelector('#form');
-closeForm.addEventListener('submit', hide)
+// closeForm.addEventListener('submit', hide)

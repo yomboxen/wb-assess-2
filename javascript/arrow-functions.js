@@ -3,7 +3,7 @@ const giveMeTwo = () => 2; // Replace `undefined` with your code
 
 // Write an arrow function that takes in a movie and returns '<movie> is the best movie
 // ever!' where <movie> is the argument passed into the function.
-const bestMovie = movie => console.log(`${movie} is the best movie ever!`); // Replace `undefined` with your code
+const bestMovie = (movie) => `${movie} is the best movie ever!`; // Replace `undefined` with your code
 
 // Write an arrow function called 'compareNums' that takes in 2 parameters,
 // which will be numbers.
@@ -97,8 +97,6 @@ function getBlueProducts() {
     return product.color.includes('blue')
   })
 }
-
-console.log(getBlueProducts())
 
 // Get the total price of all the products using the reduce method.
 function getTotalPrice() {

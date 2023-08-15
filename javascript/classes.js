@@ -6,9 +6,9 @@
 //   bicycles might come from different manufacturers
 // - Bicycles come in different colors (ex.: red, silver, blue…)
 class Bicycle {
-  constructor(numWheels, colors, manufacturer) {
-  this.numWheels = numWheels
-  this.colors = colors
+  constructor(color, manufacturer) {
+  this.numWheels = 2
+  this.color = color
   this.manufacturer = manufacturer
   }
 }
@@ -29,7 +29,12 @@ class User {
   }
 
   processChangePassword(currentPassword, newPassword) {
-    // Replace this with your code
+    if(currentPassword === this.password) {
+      this.password = newPassword
+      return true 
+    } else {
+      return false
+    }
   }
 }
 
